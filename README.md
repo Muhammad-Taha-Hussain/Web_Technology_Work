@@ -1,6 +1,6 @@
 # Web_Technology_Work
 
-Web Development Course – MUhammad Taha Hussain
+Web Development Course – Muhammad Taha Hussain
 
 Roll Number: FA21-BCS-122
 
