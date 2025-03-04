@@ -15,7 +15,12 @@
         <span class="menu-icon" onclick="toggleMenu()">☰</span>
         <div class="left-column" id="sidebar">
             <span class="close-icon" onclick="toggleMenu()">✖</span>
-            <img src="./assets//images/profile.jpg" alt="Profile Img" class="profile-img">
+            <!-- style="display: none;" -->
+            <div style="display: block-inline; justify-content: center; align-items: center;">
+                <img id="profile-img" onclick="document.getElementById('image-upload').click();" src="./assets//images/profile.jpg" alt="Profile Img" class="profile-img">
+                <input type="file" id="image-upload" accept="image/*"  onchange="previewImage(event)">
+                <!-- <p class="uploadImage">Upload Image</p> -->
+            </div>
             <section class="contact-info">
                 <h2>Contact Information</h2>
                 <p><strong>Address:</strong> Lahore, Punjab, 55110 PB</p>
@@ -88,6 +93,17 @@
         </div>
     </div>
     <script>
+        function previewImage(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('profile-img').src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+
         function toggleMenu() {
             const sidebar = document.getElementById('sidebar');
             const iconBars = document.querySelector('.menu-icon');
