@@ -13,8 +13,11 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Red Store | Ecommerce Website</title>
+
   </head>
   <body>
+
+    <!-- header -->
     <div class="header">
       <div class="container">
         <div class="navbar">
@@ -22,7 +25,7 @@
             <img src="./assets/images/logo.png" width="125px" alt="" />
           </div>
           <nav>
-            <ul>
+            <ul id="menuItems">
               <li><a href="#home">Home</a></li>
               <li><a href="#Products">Products</a></li>
               <li><a href="#About">About</a></li>
@@ -31,6 +34,7 @@
             </ul>
           </nav>
           <img src="./assets/images/cart.png" width="30px" alt="" />
+          <img src="./assets/images/menu.png" class="menu-icon" width="30px" alt="" onclick="toggleMenu()" />
         </div>
         <div class="row">
           <div class="col2">
@@ -67,6 +71,7 @@
         </div>
       </div>
      </div>
+
          <!-- featured products -->
      <div class="small-container">
         <h2 class="title">Featured Products</h2>
@@ -220,10 +225,148 @@
               <p>Exclusively Available on RedStore</p>
               <h1>Smart Band 4</h1>
               <small>The mi Smart Band 4 features a 39.9% larger (than MI band 3) AMOLED color full-touch display with adjustable brightness, so everthing is clear as can be.</small>
+              <a href="#" class="btn">Buy Now &#8594;</a>
             </div>
             <div class="col2"></div>
           </div>
         </div>
       </div>
+
+      <!-- testimonial -->
+       <div class="testimonial">
+        <div class="small-container">
+          <div class="row">
+            <div class="col3">
+              <i class="fa fa-quote-left"></i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, sapiente labore! Ducimus, sint! Adipisci, ullam!</p>
+              <i class="fa fa-quote-right"></i>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+              <img src="./assets/images/user-1.png" alt="">
+              <h3>Sean Parker</h3>
+            </div>
+            <div class="col3">
+              <i class="fa fa-quote-left"></i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, sapiente labore! Ducimus, sint! Adipisci, ullam!</p>
+              <i class="fa fa-quote-right"></i>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+              <img src="./assets/images/user-2.png" alt="">
+              <h3>Mike Hussey</h3>
+            </div>
+            <div class="col3">
+              <i class="fa fa-quote-left"></i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, sapiente labore! Ducimus, sint! Adipisci, ullam!</p>
+              <i class="fa fa-quote-right"></i>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+              <img src="./assets/images/user-3.png" alt="">
+              <h3>Jana llama</h3>
+            </div>
+          </div>
+        </div>
+       </div>
+
+       <!-- brands -->
+        <div class="brands">
+          <div class="small-container">
+            <div class="row">
+              <div class="col5">
+                <img src="./assets/images/logo-godrej.png" alt="">
+              </div>
+              <div class="col5">
+                <img src="./assets/images/logo-coca-cola.png" alt="">
+              </div>
+              <div class="col5">
+                <img src="./assets/images/logo-oppo.png" alt="">
+              </div>
+              <div class="col5">
+                <img src="./assets/images/logo-paypal.png" alt="">
+              </div>
+              <div class="col5">
+                <img src="./assets/images/logo-philips.png" alt="">
+              </div>
+              <div class="col5">
+                <img src="./assets/images/logo-white.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+         <div class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="footerCol1">
+                <h3>Download our App</h3>
+                <p>Download app for android and ios mobiles.</p>
+                <div class="app-logo">
+                  <img src="./assets/images/play-store.png" alt="">
+                  <img src="./assets/images/app-store.png" alt="">
+                </div>
+              </div>
+              <div class="footerCol2">
+                <img src="./assets/images/logo-white.png" alt="">
+                <p>Our Purpose Is to Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+              </div>
+              <div class="footerCol3">
+                <h3>Useful Links</h3>
+                <ul>
+                  <li>Blog Posts</li>
+                  <li>Return Policy</li>
+                  <li>Join Affiliate></li>
+                </ul>
+              </div>
+              <div class="footerCol4">
+                <h3>Follow us</h3>
+                <ul>
+                  <li>Facebook</li>
+                  <li>Twitter</li>
+                  <li>Instagram</li>
+                  <li>YouTube</li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2025</p>
+          </div>
+         </div>
+
+         <script>
+          let menuToggle = document.getElementById("menuItems");
+
+function toggleMenu() {
+    menuToggle.classList.toggle("show"); // Toggle class
+
+    let imagechange = document.querySelector(".menu-icon");
+    imagechange.src = imagechange.src.includes("menu.png") 
+        ? "./assets/images/buy-1.jpg" 
+        : "./assets/images/menu.png";
+}
+
+window.onscroll = function () {
+  let navbar = document.querySelector(".navbar");
+  let scrollPosition = window.scrollY;
+
+  if (scrollPosition > 100) { // Adjust this value according to your layout
+    navbar.classList.add("fixed");
+  } else {
+    navbar.classList.remove("fixed");
+  }
+};
+
+        </script>
   </body>
 </html>
