@@ -1,0 +1,237 @@
+/* Basic reset and layout
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .checkout-container {
+    max-width: 500px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-top: 5px;
+  }
+  
+  input.invalid,
+  textarea.invalid {
+    border-color: red;
+  }
+  
+  button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .success-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    border-radius: 5px;
+    text-align: center;
+  }
+   */
+
+
+    body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: calc(100% - 12px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-color: #007bff;
+}*/
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+} 
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* input:invalid {
+    border-color: red;
+} */
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.5s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+ 
+
+
+
+/* New styles for floating input labels */
+.floating-input {
+    position: relative;
+    margin-bottom: 25px; /* Adjust spacing between floating input groups */
+}
+
+.floating-input input[type="text"],
+.floating-input input[type="email"],
+.floating-input input[type="tel"],
+.floating-input input[type="date"],
+.floating-input textarea {
+    width: calc(100% - 12px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none; /* Remove default focus outline */
+}
+
+.floating-input textarea {
+    min-height: 80px;
+}
+
+.floating-input label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #777;
+    transition: 0.3s ease all;
+    pointer-events: none; /* Prevent label from interfering with input clicks */
+    background-color: white; /* Add background to avoid overlap with border */
+    padding: 0 5px; /* Add some padding around the label text */
+}
+
+.floating-input input:focus + label,
+.floating-input input:not(:placeholder-shown) + label,
+.floating-input textarea:focus + label,
+.floating-input textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #007bff;
+    transform: translateY(0); /* Move label above the input */
+}
+
+
+.floating-input input:invalid,
+.floating-input textarea:invalid {
+    border-color: red;
+}
+
+.floating-input input.is-invalid + label,
+.floating-input textarea.is-invalid + label {
+    color: red; /* Change label color when input is invalid */
+}

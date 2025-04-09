@@ -1,0 +1,133 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="style.css">  Will use this for CSS 
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Checkout</h1>
+    <form id="checkoutForm" novalidate>
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required pattern="^[A-Za-z\s]+$" />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required pattern="^\d{10,15}$" />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" required></textarea>
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="cardNumber">Credit Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" required pattern="^\d{16}$" maxlength="16" />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="expiry">Expiry Date</label>
+        <input type="month" id="expiry" name="expiry" required />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" required pattern="^\d{3}$" maxlength="3" />
+        <small class="error-message"></small>
+      </div>
+
+      <button type="submit">Submit Order</button>
+    </form>
+    <div id="successMessage" class="success-message" style="display: none;">
+      Your order has been placed successfully!
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
+
+-->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <form id="checkoutForm">
+            <div class="form-group floating-input ">
+                <input type="text" id="fullName" name="fullName" required pattern="^[A-Za-z\s]+$" title="Only alphabets and spaces are allowed">
+                <label for="fullName">Full Name:</label>
+                <div class="error-message" id="fullNameError"></div>
+            </div>
+
+            <div class="form-group floating-input ">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group floating-input ">
+                <input type="tel" id="phone" name="phone" required pattern="^[0-9]+$" minlength="11" maxlength="11" title="Only digits allowed, with 11 digits">
+                <label for="phone">Phone Number:</label>
+                <div class="error-message" id="phoneError"></div>
+            </div>
+
+            <div class="form-group floating-input ">
+                <textarea id="address" name="address" required></textarea>
+                <label for="address">Address:</label>
+                <div class="error-message" id="addressError"></div>
+            </div>
+
+            <div class="form-group floating-input ">
+                <input type="text" id="cardNumber" name="cardNumber" required pattern="^[0-9]{16}$" title="Must be a 16-digit number">
+                <label for="cardNumber">Credit Card Number:</label>
+                <div class="error-message" id="cardNumberError"></div>
+            </div>
+
+            <div class="form-group floating-input ">
+                <input type="date" id="expiryDate" name="expiryDate" required>
+                <label for="expiryDate">Expiry Date:</label>
+                <div class="error-message" id="expiryDateError"></div>
+            </div>
+
+            <div class="form-group floating-input ">
+                <input type="text" id="cvv" name="cvv" required pattern="^[0-9]{3}$" title="Must be a 3-digit number">
+                <label for="cvv">CVV:</label>
+                <div class="error-message" id="cvvError"></div>
+            </div>
+
+            <button type="submit">Place Order</button>
+        </form>
+        <div id="successMessage" class="success-message" style="display:none;">
+            Order placed successfully!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+ 

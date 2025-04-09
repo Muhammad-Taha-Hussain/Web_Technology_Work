@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignments Dashboard</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        height: 100vh;
+        background-color: #f4f4f4;
+        overflow: hidden;
+      }
+
+      .sidebar {
+        width: 220px;
+        background-color: #1e1e2f;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow: hidden;
+      }
+
+      .sidebar h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #94ebff;
+      }
+
+      .sidebar a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+
+      .sidebar a.active {
+        background-color: #00bfff;
+        color: #1e1e2f;
+        font-weight: bold;
+        box-shadow: inset 3px 0 0 #ffffff;
+      }
+
+      .sidebar a:hover {
+        background-color: #2f2f44;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 0;
+        border: none;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        overflow: hidden;
+        scrollbar-width: none;
+      }
+
+      iframe::-webkit-scrollbar {
+        display: none;
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          flex-direction: row;
+          width: 100%;
+          overflow-x: auto;
+        }
+
+        .sidebar a {
+          white-space: nowrap;
+        }
+
+        iframe {
+          height: calc(100vh - 100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Assignments</h2>
+      <a href="./Assignment_1/cv.html" class="active" target="contentFrame">Assignment 1</a>
+      <a href="./Assignment_2/index.html" class="active" target="contentFrame">Assignment 2</a>
+      <a href="./Assignment_2/index.html" class="active" target="contentFrame">Lab Task 1</a>
+      <a href="./Lab_Tasks_2/index.html" class="active" target="contentFrame">Lab Task 2</a>
+    </div>
+
+    <div class="main-content">
+      <iframe name="contentFrame" src="./Assignment_1/cv.html"></iframe>
+    </div>
+
+    <script>
+        const links = document.querySelectorAll('.sidebar a');
+
+        links.forEach(l => l.classList.remove('active'));
+        links[0].classList.add('active'); 
+      
+        links.forEach(link => {
+          link.addEventListener('click', () => {
+            
+            links.forEach(l => l.classList.remove('active'));
+            
+            link.classList.add('active');
+          });
+        });
+      </script>
+      
+  </body>
+</html>
+
+
