@@ -11,9 +11,8 @@ import { useNavigate } from "react-router-dom";
 import "./checkout.css";
 import { toast } from "react-toastify";
 
-const stripePromise = loadStripe(
-  "pk_test_51PsQRY1om7WfioWhk7gin7GHAYvG3hv2CNVvKJIinGnX2XeeRp9DOedjXqvOAihgBrW3LFGL96omh2LxirqUDSWN0023m4W56j"
-);
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+
 
 const CheckoutForm = ({
   cartItems,

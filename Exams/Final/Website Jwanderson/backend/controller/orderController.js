@@ -1,8 +1,8 @@
 import Jw_orders from "../models/Jw_orders.js";
 import Jw_cart_items from "../models/Jw_cart_items.js";
 import Stripe from 'stripe';
-const stripe = new Stripe('***REMOVED***_51PsQRY1om7WfioWhSRmZjWCD53ye3QtRdUJGUvtWDR8GEKOxcmzR0UL0oYZuQvTxiGOV6HcvhHz3gl5QcY1Ddyik00N0pRv7bZ'); // set in .env
-// const stripe = require('stripe')("***REMOVED***_51PsQRY1om7WfioWhSRmZjWCD53ye3QtRdUJGUvtWDR8GEKOxcmzR0UL0oYZuQvTxiGOV6HcvhHz3gl5QcY1Ddyik00N0pRv7bZ");
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export const createPaymentIntent = async (req, res) => {
   try {
