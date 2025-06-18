@@ -1,0 +1,38 @@
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .pay-button {
+    padding: 10px;
+    background-color: #556cd6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .pay-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  
+ 
+
+  .success-animation {
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 1s ease-in-out;
+    font-size: 24px;
+    color: green;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Muhammad Taha Hussain</title>
+    <link rel="stylesheet" href="./cv.css">
+</head>
+<body>
+
+    <!-- Second Part of Header (Sticky Navigation) -->
+    <header class="sticky-header">
+        <a class="logo" href="../index.html" >JW ANDERSON</a>
+        <nav>
+            <ul>
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">MEN</a></li>
+                <li><a href="#">BAGS</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="./cv.html">CV</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <span class="icon1">🌍 PK</span>
+            <span class="icon2">👤</span>
+            <span class="icon3">❤️</span>
+            <span class="icon4">🛒</span>
+        </div>
+    </header>
+    <div class="seperator"></div>
+    <div class="cv-container">
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        <div class="left-column" id="sidebar">
+            <span class="close-icon" onclick="toggleMenu()">✖</span>
+            <img src="../assets/images/download.jpg" alt="Profile Img" class="profile-img">
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Address:</strong> Lahore, Punjab, 55110 PB</p>
+                <p><strong>Phone:</strong> 03294338803</p>
+                <p><strong>Email:</strong> fa21-bcs-122@cuilahore.edu.pk</p>
+            </section>
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Cross Platform Development</li>
+                    <li>Proficient in Redux</li>
+                    <li>Understanding of REST APIs</li>
+                    <li>Knowledge of TypeScript</li>
+                    <li>Native Modules Integration</li>
+                    <li>Real-time Data Handling</li>
+                    <li>Skilled in Flexbox</li>
+                    <li>Strong React Native Experience</li>
+                    <li>Experienced with Expo</li>
+                    <li>Object-Oriented Programming</li>
+                </ul>
+            </section>
+            <section class="software">
+                <h2>Software & Tools</h2>
+                <ul>
+                    <li>JavaScript (ES6+), TypeScript</li>
+                    <li>React.js, Next.js, React Native</li>
+                    <li>RESTful APIs, React Navigation</li>
+                    <li>Node.js, Express.js, MongoDB, PostgreSQL</li>
+                    <li>Supabase, Firebase, Socket.io</li>
+                    <li>Google Maps API, Stripe API</li>
+                    <li>Git & GitHub, Postman</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <header>
+                <h1>Taha Hussain</h1>
+                <p>Final Year Computer Science Student | Full-Stack Developer | React Native Developer</p>
+            </header>
+            <section class="education">
+                <h2>Education</h2>
+                <p><strong>Bachelor of Science: Computer Science</strong> - COMSATS University (Expected June 2025, GPA: 2.7)</p>
+                <p><strong>Intermediate in F.S.c</strong> - Punjab Group of Colleges (983 / 1100, March 2021)</p>
+            </section>
+            <section class="experience">
+                <h2>Work Experience</h2>
+                <p><strong>React Native Developer</strong> | Freelance & Personal Projects (Aug 2024 - Present)</p>
+                <ul>
+                    <li>Built and deployed production-ready cross-platform apps using React Native & TypeScript.</li>
+                    <li>Integrated Supabase for authentication and database management.</li>
+                    <li>Implemented role-based access control (RBAC) and OAuth authentication.</li>
+                    <li>Engineered real-time notifications and chat systems.</li>
+                    <li>Managed local storage using AsyncStorage, SQLite, and SecureStore.</li>
+                    <li>Integrated third-party services like Stripe for payments and Google Maps API.</li>
+                    <li>Worked with Supabase Edge Functions for backend logic.</li>
+                </ul>
+            </section>
+            <section class="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li>MERN Estate Website</li>
+                    <li>Admin Panel</li>
+                    <li>Chat App</li>
+                    <li>Food Delivery App</li>
+                    <li>Learning Management System</li>
+                    <li>Quran App</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const iconBars = document.querySelector('.menu-icon');
+            const iconClose = document.querySelector('.close-icon');
+            iconBars.classList.toggle('open');
+            iconClose.classList.toggle('open');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

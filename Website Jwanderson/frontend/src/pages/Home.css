@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .home-wrapper {
+    padding-top: 40px; /* Top space */
+    background-color: #f9f9f9;
+    height: 100vh;
+  }
+  
+  .home-container {
+    display: flex;
+    gap: 10px; 
+    height: calc(100vh - 40px);
+    padding: 0 20px;
+  }
+  
+  .half {
+    background-color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .home-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    
+  }
+  
+  .shop-text {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    pointer-events: none; /* Allow clicking through text */
+  }
+  
+  .shop-text span {
+    font-size: 1.3rem;
+    font-weight: normal;
+    display: block;
+    margin-top: 6px;
+  }
+  
+  .product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .product-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 0;
+  }
+  
+  .product-card img {
+    width: 180px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .banner-wrapper {
+    position: relative;
+    margin: 5px 0;
+    padding: -1px 20px;
+  }
+  
+  .banner-link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    pointer-events: none; /* keep the click target on the link itself */
+  }
+  
+  .banner-text span {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 8px;
+    display: block;
+  }
+
+  image {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }
