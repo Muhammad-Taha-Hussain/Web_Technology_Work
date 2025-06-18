@@ -1,0 +1,98 @@
+/* src/pages/Signin.css */
+
+.signin-container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.signin-box {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.signin-box h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.subtext {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 60px;
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signin-form label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.signin-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input input {
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 13px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+}
+
+.forgot-link {
+    text-align: left;
+    font-size: 13px;
+    margin-top: 2px;
+    color: #444;
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+.register-text {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #444;
+}
+
+.register-text a {
+    text-decoration: underline;
+    margin-left: 4px;
+    color: #000;
+}
